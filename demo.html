@@ -21,6 +21,14 @@
 			let seconds = Math.floor((distance % (1000 * 60)) /1000);
 
 		demo.innerHTML = days + "d"+ hours + "h" + minutes +"m" +seconds + "s";
+		demo.style.color = "#40bf60";
+		if(seconds <= 30){
+			demo.style.color = "#bfbf00";
+		}
+		if(seconds <= 7){
+			demo.style.color = "#cf4000";
+		}
+
 		if (distance < 0) {
 			clearInterval(x);
 			demo.innerHTML = "EXPIRED";
